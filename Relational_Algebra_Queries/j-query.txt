@@ -1,0 +1,23 @@
+\project_{bar, drinker}(
+    \rename_{drinker, address1}drinker
+    \cross
+    \rename_{bar, address2}bar)
+\diff
+\project_{bar, drinker}(
+    \project_{bar, drinker, beer}(
+    ((\rename_{drinker, address1}drinker
+    \cross
+    \rename_{bar, address2}bar)
+    \join
+    serves))
+    \diff
+    \project_{bar, drinker, beer}(
+    (((\rename_{drinker, address1}drinker
+    \cross
+    \rename_{bar, address2}bar)
+    \join
+    serves)))
+    \join
+    likes)
+
+;

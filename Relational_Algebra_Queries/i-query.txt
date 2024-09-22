@@ -1,0 +1,13 @@
+\project_{drinker1}(
+    \rename_{drinker1, beer1}likes
+    \join_{drinker1 = drinker2 and beer1 <> beer2}
+    \rename_{drinker2, beer2}likes
+)
+\diff
+\project_{drinker1}(
+    (\rename_{drinker1, beer1}likes
+    \join_{drinker1 = drinker2 and beer1 <> beer2}
+    \rename_{drinker2, beer2}likes)
+    \join_{drinker3 = drinker2 and beer3 <> beer2 and beer3 <> beer1}
+    \rename_{drinker3, beer3}likes
+);

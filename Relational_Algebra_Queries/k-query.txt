@@ -1,0 +1,28 @@
+\project_{name} drinker
+\diff
+(
+  \project_{likes.drinker} (
+    ((\project_{likes.drinker,serves.bar} (\rename_{serves:*} (\project_{bar,beer} serves)
+      \join_{serves.beer=likes.beer}
+    \rename_{likes:*} (\project_{drinker,beer} likes)))
+    \diff
+    (\project_{drinker,bar} (
+      \project_{drinker,name} (
+        \project_{drinker,name} (
+          (\rename_{all_likes:*} (\project_{drinker} likes))
+          \cross
+          (\rename_{all_beers:*} (\project_{name} beer))
+        )
+        \diff
+        \project_{drinker,beer} (likes)
+      )
+      \join_{name=beer}
+      (\rename_{available:*} (\project_{bar,beer} serves))
+    ))
+  )
+  \diff
+  (\project_{name,bar} (
+    \project_{name} drinker \join_{drinker.name=frequents.drinker} frequents
+  ))
+)
+);
