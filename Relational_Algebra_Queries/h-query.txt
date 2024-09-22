@@ -1,0 +1,11 @@
+\project_{beer, bar}serves
+\diff
+\project_{beer2, bar2}(
+    \select_{price1 < price2}(
+        \rename_{bar1, beer1, price1}serves
+        \join_{beer1 = beer2}(
+            \rename_{bar2, beer2, price2}serves
+        )
+    )
+);
+

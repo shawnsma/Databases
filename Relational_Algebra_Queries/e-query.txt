@@ -1,0 +1,11 @@
+\project_{brewer}(
+    \select_{name = beer}(
+        beer
+        \cross(
+        \rename_{beer}(
+            \project_{name}beer)
+        \diff
+        \project_{beer}likes
+        )
+    )
+);

@@ -1,0 +1,14 @@
+\project_{name, address}(
+    \select_{name = drinker}(
+        drinker
+        \cross
+        (
+            \project_{drinker}(
+            \select_{beer = 'Dixie'}likes
+        ) \intersect
+        \project_{drinker}(
+            \select_{beer = 'Corona'}likes
+            )
+        )
+    )
+);

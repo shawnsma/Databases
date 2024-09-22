@@ -1,0 +1,7 @@
+\project_{name, address} (
+    \select_{price < 2.5}(
+        \select_{beer = 'Budweiser'} (
+            bar \join_{name = bar}serves
+        )
+    )
+);

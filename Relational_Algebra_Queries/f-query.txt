@@ -1,0 +1,8 @@
+\project_{drinker, drinker1}(
+    \select_{drinker < drinker1}(
+        likes
+        \join_{beer = beer1}(
+            \rename_{drinker1, beer1} likes
+        )
+    )
+);

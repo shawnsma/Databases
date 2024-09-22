@@ -1,0 +1,17 @@
+(\project_{drinker}(
+    likes
+)
+\diff
+\project_{drinker}(
+    \select_{beer = 'Corona'}likes
+)
+)
+\intersect(\project_{drinker}(
+    frequents
+    \join_{bar = lebar}
+    \rename_{lebar}
+        \project_{bar}(
+            \select_{beer = 'Corona'}serves
+        )
+    )
+);

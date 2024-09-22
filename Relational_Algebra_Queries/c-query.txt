@@ -1,0 +1,9 @@
+\project_{bar}(
+    \select_{beer = 'Amstel'}serves
+) \intersect (
+    \project_{bar}serves
+    \diff
+    \project_{bar}(
+        \select_{beer = 'Corona'}serves
+    )
+);
